@@ -1,0 +1,109 @@
+---
+title: "French Elite analysis"
+author: "Gary Sztajnman"
+date: "February 22, 2016"
+output: pdf_document
+---
+
+
+```{r}
+
+### Libraries----
+library(data.table)
+library(dplyr)
+library(plyr)
+library(ggplot2)
+library(igraph)
+
+### import data----
+netw <- read.csv("http://moreno.ss.uci.edu/ffe.dat", header=T, sep=";", skip= 36)
+netw = setDT(netw)[, tstrsplit(DATA., ' ')]
+netw = netw[,V1:=NULL]
+
+#splitting the network data to advice/friendship/report
+influence <- as.matrix(slice(netw, 1:28))
+influenceg=graph.adjacency(influence,mode="directed",weighted=NULL)
+
+elite <- as.matrix(slice(netw, 29:55))
+friend <- as.matrix(slice(netw, 56:84))
+```
+
+```{r}
+#importing attributes data
+setwd("/Users/garyair/Desktop/Dropbox/Columbia/SNA/Labs/SNA-EgoNetwork-1/French elite/")
+attributes <- read.csv("attributes.csv", header=TRUE)
+View(attributes)
+
+#Clean missing data in attributes
+attributes$igyear <- NULL
+attributes$birthplace <- NULL
+attributes$polyyear <- NULL
+attributes$enayear <- NULL
+attributes$zipcode <- NULL
+
+
+#We decide to restrict our analysis to 3 major topics: age, education and religion. Hence, we delete other attributes
+attributes$fathers.lev <- NULL
+attributes$masons <- NULL
+attributes$socialreg <- NULL
+attributes$eliteprom <- NULL
+attributes$prestige <- NULL
+attributes$clubs <- NULL
+attributes$topboards <- NULL
+attributes$inspec.gen <- NULL
+attributes$cabinet <- NULL
+attributes$finance.min <- NULL
+attributes$party <- NULL
+attributes$elitevote <- NULL
+
+
+#Cleaning and polishing data
+names(attributes)
+#"sciencepoly" "polytech"    "university"  "normal.sch"  "ena" "religion" 
+attributes$sciencepoly[attributes$sciencepoly == 2] <- FALSE
+attributes$sciencepoly[attributes$sciencepoly == 1] <- TRUE
+
+attributes$polytech[attributes$polytech == 2] <- FALSE
+attributes$polytech[attributes$polytech == 1] <- TRUE
+
+attributes$university[attributes$university == 2] <- FALSE
+attributes$university[attributes$university == 1] <- TRUE
+
+attributes$normal.sch[attributes$normal.sch == 2] <- FALSE
+attributes$normal.sch[attributes$normal.sch == 1] <- TRUE
+
+attributes$ena[attributes$ena == 2] <- FALSE
+attributes$ena[attributes$ena == 1] <- TRUE
+
+
+```
+
+
+
+```{r}
+### calculate degree, ego network size ###
+V(influenceg)$degree <- degree(influenceg)
+
+### Add degree ###
+attributes$degree = V(influenceg)$degree
+dim(attributes)
+summary(lm(degree~ religion, attributes))
+
+### calculate density of ego network ###
+attributes$transitivity =transitivity(influenceg, type="local")  
+dens
+
+### Add degree ###
+attributes$dens = dens
+dim(attributes)
+attributes$transitivity[attributes$transitivity == "Nan"] <- 0
+attributes$transitivity
+summary(lm(dens~ religion, attributes))
+
+### do this to get density added into the file ###
+dd <-data.frame(ID = V(influenceg)$name) 
+cb2 <- cbind(dd, dens)
+aggdatanew3 <- merge(aggdatanew2, cb2, by=c("ID"))
+attributes
+summary(lm(homog ~ gender1 + V(influenceg)$degree + transitivity, aggdatanew3))
+```

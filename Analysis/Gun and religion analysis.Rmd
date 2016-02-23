@@ -1,0 +1,70 @@
+---
+title: "SNA - lab report - Gun and religion"
+author: "Gary Sztajnman"
+date: "February 22, 2016"
+output: pdf_document
+---
+
+
+
+```{r}
+library(ggplot2)
+setwd("/Users/garyair/Desktop/Dropbox/Columbia/SNA/Labs/SNA-EgoNetwork-1/small gun and data/")
+
+data <- read.csv("sub-data.csv", stringsAsFactors=FALSE, colClasses = "numeric")
+View(data)
+
+?read.csv
+colnames(data) <- c("CASEID" = "ID","v731"="GunControl (731)", "v732"="ImportanceGun (732)", 
+                    "v872"="IsReligionImportant (872)", "v874"="HowOftenPray (874)")
+
+View(data)
+```
+
+gun control(731)
+Do you think the federal government should make it more
+difficult for people to buy a gun than it is  now, make
+it easier for people to buy a gun, or keep these rules
+about the same as they are now?
+
+  1. A lot more difficult
+  2. Somewhat more difficult
+  3. Keep rules about the same
+  4. Somewhat easier
+  5. A lot easier
+
+```{r}
+lapply(data, class)
+plot(data$Importance)
+attach(data)
+plot(data)
+
+# Simple Scatterplot
+plot(v732, v872, main="Scatterplot", 
+  	xlab="Religion level", ylab="gun control", pch=19)
+
+summary(lm(v732~ v872, data=data))
+
+# Add fit lines
+abline(lm(v732~ v872), col="red") # regression line (y~x) 
+lines(lowess(v872, v732), col="blue") # lowess line (x,y)
+
+
+```
+
+```{r}
+lapply(data, class)
+plot(data$Importance)
+attach(data)
+plot(data)
+
+# Simple Scatterplot
+plot(v732, v874, main="Scatterplot", 
+  	xlab="Religion level", ylab="gun control", pch=19)
+
+summary(lm(v732~ v874, data=data))
+
+# Add fit lines
+abline(lm(v732~ v874), col="red") # regression line (y~x) 
+lines(lowess(v874, v732), col="blue") # lowess line (x,y)
+```

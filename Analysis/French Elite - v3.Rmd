@@ -1,0 +1,478 @@
+---
+title: "French Elite analysis"
+author: "Gary Sztajnman"
+date: "February 22, 2016"
+output: pdf_document
+---
+
+In this homework, we are going to study the "FRENCH FINANCIAL ELITE" dataset downloaded from http://moreno.ss.uci.edu/. 
+This dataset is composed of three 28 by 28 matrices on the influence, the belonging of an elite and the friendship of 28 top French leaders in Finance.
+We also have information about their background such as religion, education or age...
+
+\section*{Hypothesis}
+I want to study the characteristics of powerfull member of an elite. 
+At first, I wanted to see the impact of higher education on the influence of leaders in an elite group. However, education level may not be a differentiable factor as all leaders when through inpressive school (in particular in France where people are considered based on the school they went to.
+Another factor that is more easy to anticipate is the level of religion defined as the belief in god and the frequency of praying.
+
+We want to test the relation between religion and position of power in an elite group. In particular, we hypothesis that the more powerful a leader is the less he prays and believe in god.
+
+\section*{Explanation}
+In France, the concept of "laïcité" (secularism) is particularly important in higher education school and in high business circle and elite people come from these school. Hence, even if they may come from religious family, they will probably get away from religion after and during their higher education. Furthermore, the financial elite is busy and we could think that don't have to much time to pray and think about religion and god. Finally, financial leaders tends to prove their skills by their understanding of financial markets and business and not by showing their faith in god.
+
+So I would think that French financial leaders are less linked to religion when they are more influencial.
+
+Let's use the dataset to analyze that
+
+\section*{Retrieveing and cleaning the data}
+```{r}
+
+### Libraries----
+library(data.table)
+library(dplyr)
+library(plyr)
+library(ggplot2)
+library(igraph)
+
+### import data----
+netw <- read.csv("http://moreno.ss.uci.edu/ffe.dat", header=T, sep=";", skip= 36)
+netw = setDT(netw)[, tstrsplit(DATA., ' ')]
+netw = netw[,V1:=NULL]
+View(netw)
+
+
+#splitting the network data to advice/friendship/report
+influence <- as.matrix(slice(netw, 1:28))
+elite <- as.matrix(slice(netw, 29:56))
+friend <- as.matrix(slice(netw, 57:84))
+```
+
+```{r}
+#importing attributes data
+setwd("/Users/garyair/Desktop/Dropbox/Columbia/SNA/Labs/SNA-EgoNetwork-1/French elite/")
+attributes <- read.csv("attributes.csv", header=TRUE)
+View(attributes)
+
+#Clean missing data in attributes
+attributes$igyear <- NULL
+attributes$birthplace <- NULL
+attributes$polyyear <- NULL
+attributes$enayear <- NULL
+attributes$zipcode <- NULL
+
+
+#We decide to restrict our analysis to 3 major topics: age, education and religion. Hence, we delete other attributes
+attributes$fathers.lev <- NULL
+attributes$masons <- NULL
+attributes$socialreg <- NULL
+attributes$eliteprom <- NULL
+attributes$prestige <- NULL
+attributes$clubs <- NULL
+attributes$topboards <- NULL
+attributes$inspec.gen <- NULL
+attributes$cabinet <- NULL
+attributes$finance.min <- NULL
+attributes$party <- NULL
+attributes$elitevote <- NULL
+
+
+#Cleaning and polishing data
+names(attributes)
+#"sciencepoly" "polytech"    "university"  "normal.sch"  "ena" "religion" 
+attributes$sciencepoly[attributes$sciencepoly == 2] <- FALSE
+attributes$sciencepoly[attributes$sciencepoly == 1] <- TRUE
+
+attributes$polytech[attributes$polytech == 2] <- FALSE
+attributes$polytech[attributes$polytech == 1] <- TRUE
+
+attributes$university[attributes$university == 2] <- FALSE
+attributes$university[attributes$university == 1] <- TRUE
+
+attributes$normal.sch[attributes$normal.sch == 2] <- FALSE
+attributes$normal.sch[attributes$normal.sch == 1] <- TRUE
+
+attributes$ena[attributes$ena == 2] <- FALSE
+attributes$ena[attributes$ena == 1] <- TRUE
+
+
+```
+
+\section*{Variables}
+
+For this study, 3 types of variables have been selected.
+ 1."birthdate"      
+ 2."sciencepoly", "polytech", "university", "normal.sch", "ena"                    
+ 3. "religion" 
+ 
+Birthdate is an independent variable, it gives an idea of which elite member is part of which generation
+Education variables are binary coded (true or false)
+Religion is a class variable coded from 2 to 4 (2 is low religion level and 4 is high religion level)
+
+To this attribute, we add the ego network measure: transity and network size for elite and influence
+
+Influence network: "WHO INFLUENCES YOU"
+```{r}
+influenceg=graph.adjacency(influence,mode="directed",weighted=NULL)
+
+### calculate ego network influence size ###
+attributes$influence.degree <- degree(influenceg)
+ggplot(attributes, aes(x= religion, y =influence.degree )) +
+    geom_point(shape=1) +    # Use hollow circles
+    geom_smooth()    
+
+### calculate transitivity of elite ego network ###
+attributes$Influence.transitivity =transitivity(influenceg, type="local")  
+attributes$Influence.transitivity[attributes$Influence.transitivity == "NA"] <- mean(attributes$Influence.transitivity)
+
+ggplot(attributes, aes(x= religion, y =Influence.transitivity )) +
+    geom_point(shape=1) +    # Use hollow circles
+    geom_smooth()    
+
+```
+
+Elite network: "WHO IS IN THE ELITE"
+```{r}
+eliteg=graph.adjacency(elite,mode="undirected",weighted=NULL)
+### calculate ego network elite size ###
+attributes$elite.degree <- degree(eliteg)
+ggplot(attributes, aes(x= religion, y =elite.degree )) +
+    geom_point(shape=1) +    # Use hollow circles
+    geom_smooth()    
+
+### calculate transitivity of elite ego network ###
+attributes$elite.transitivity =transitivity(eliteg, type="local")  
+attributes$elite.transitivity[attributes$elite.transitivity == "NaN"] <- mean(attributes$elite.transitivity)
+
+ggplot(attributes, aes(x= religion, y =elite.transitivity )) +
+    geom_point(shape=1) +    # Use hollow circles
+    geom_smooth()    
+
+
+
+
+```
+
+
+\section*{Initial results}
+
+If we look at the elite network and the influence network, we see in both case a clear decreasing factor between religion and the place in the elite.
+Elite member tend to have a more influential place when they spend less time to pray.
+If we just plot the average amount of excitement people claim as a function
+of the average educational attainment of their social circle, we see that as
+one’s social circle is more educated, the higher excitement ego’s report.
+
+However, it's interesting to see that transitivity is positively correlated with religion in this dataset. Religious people may be less influential but more connected to their religious peers.
+
+
+We will now use regression model to further study these ideas.
+
+\section*{Model 1}
+We first start by studying the impact on influence:
+```{r}
+summary(lm(influence.degree~ religion, attributes))
+summary(lm(Influence.transitivity~ religion, attributes))
+```
+
+The regression on influence degree validates the idea of negative correlation between religion and influence with a p-value lower than 5% and a beta estimate of approximately -3.
+Clearly we note that more religion means less influence in our dataset.
+
+However, we can not confirm our hypothesis on religion and the transitivity of influence because the p-value is too high aroung 30%.
+
+
+\section*{Model 2}
+To be sure of our first idea on education we will the education variables in our model:
+```{r}
+summary(lm(influence.degree ~ ena + sciencepoly + polytech + university + normal.sch, attributes))
+summary(lm(Influence.transitivity~ ena + sciencepoly + polytech + university + normal.sch, attributes))
+```
+
+As expected, we note that we cannot infer any correlation between education and influence because p-values are too high. The dataset is too small to detects the impact of these binary variables on the influence levels.
+
+\section*{Model 3}
+To confirm our analysis, we will reproduce our linear regression on the elite data.
+This will help us determine if being part of the elite is linked to being influential.
+
+```{r}
+summary(lm(elite.degree~ religion, attributes))
+summary(lm(elite.transitivity~ religion, attributes))
+summary(lm(elite.degree ~ ena + sciencepoly + polytech + university + normal.sch, attributes))
+summary(lm(elite.transitivity~ ena + sciencepoly + polytech + university + normal.sch, attributes))
+```
+
+The results are similar than with the influence network. We have relatively similar level of p-value and the only thing that we can infer is that religion is negatively correlated with being part of the elite.
+
+\section*{Conclusion}
+I have given my conclusions throughout, but in summary, the answer
+appears to be “yes, one’s social circle’s average education does influence
+how exciting life seems.” The exact nature of the causality here is yet to be
+determined, but we have made it part of the way there.
+
+> summary(lm(rlife ~ aveeduc + numgiven, data=gss))
+Coefficients:
+Estimate Std. Error t value Pr(>|t|)
+(Intercept) 1.97252 0.04999 39.460 < 2e�16 ***
+aveeduc 0.09041 0.01114 8.118 1.05e�15 ***
+numgiven 0.03966 0.01059 3.746 0.000188 ***
+���
+Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Residual standard error: 0.5733 on 1364 degrees of freedom
+(9699 observations deleted due to missingness)
+Multiple R�squared: 0.06895, Adjusted R�squared: 0.06758
+F�statistic: 50.5 on 2 and 1364 DF, p�value: < 2.2e�16
+5. Consider alternate specifications of your variables (i.e., recodings of various
+kinds). Consider interactions among your variables.
+Remember that we wondered if a highly educated social circle contributes to
+a person’s excitement with life above and beyond simple the correlation
+between one’s own education and one’s excitement with life. Model 2 tests
+that. Results indicate that the positive role for educated alters on one’s sense
+of excitement largely persists and remains highly statistically significant
+(going from 0.09 in Model 1 to 0.067 in Model 2), even after including one’s
+own education level, net of ego network size.
+Model 2:
+> summary(lm(rlife ~ aveeduc + educ + numgiven, data=gss))
+Coefficients:
+Estimate Std. Error t value Pr(>|t|)
+(Intercept) 1.807723 0.067779 26.671 < 2e�16 ***
+aveeduc 0.066489 0.012944 5.137 3.2e�07 ***
+educ 0.021999 0.006141 3.582 0.000353 ***
+numgiven 0.032405 0.010737 3.018 0.002590 **
+���
+Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Residual standard error: 0.5708 on 1363 degrees of freedom
+(9699 observations deleted due to missingness)
+Multiple R�squared: 0.07763, Adjusted R�squared: 0.0756
+F�statistic: 38.24 on 3 and 1363 DF, p�value: < 2.2e�16
+Model 3 controls for more factors that we think might affect excitement with
+life and might be correlated with average education of social circle-- things
+like age (measured from 18 years of age to 89 years and older); religious
+service attendance (an 8-category variable, ranging from never to everyday);
+what sort of marital arrangement people have (i.e., married, never married,
+divorced, separated or widowed); race (either white, black or other); number
+of children (top-coded to 8 or more); and being a woman, vs. a man. Those
+controls change the results virtually nothing at all-- the coefficient on
+average education of alters goes from 0.066 to 0.07.
+Model 3:
+> summary(lm(rlife ~ aveeduc + aveeduc + numgiven + educ + age +
+attend + as.factor(marital) + as.factor(race) + childs + sex ,
+data=gss))
+Coefficients:
+Estimate Std. Error t value Pr(>|t|)
+(Intercept) 1.999548 0.113115 17.677 < 2e�16 ***
+aveeduc 0.070675 0.013043 5.418 7.11e�08 ***
+numgiven 0.023357 0.010743 2.174 0.029861 *
+educ 0.014817 0.006433 2.303 0.021421 *
+age �0.003418 0.001151 �2.970 0.003034 **
+attend 0.017686 0.005864 3.016 0.002611 **
+as.factor(marital)2 �0.055513 0.064483 �0.861 0.389451
+as.factor(marital)3 0.046550 0.050307 0.925 0.354975
+as.factor(marital)4 0.059675 0.083707 0.713 0.476032
+as.factor(marital)5 0.159601 0.047224 3.380 0.000746 ***
+as.factor(race)2 �0.188195 0.057806 �3.256 0.001159 **
+as.factor(race)3 �0.125703 0.092068 �1.365 0.172379
+childs 0.024351 0.010285 2.368 0.018044 *
+sex �0.044119 0.031938 �1.381 0.167394
+���
+Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Residual standard error: 0.5632 on 1349 degrees of freedom
+(9703 observations deleted due to missingness)
+Multiple R�squared: 0.1091, Adjusted R�squared: 0.1005
+F�statistic: 12.71 on 13 and 1349 DF, p�value: < 2.2e�16
+Model 4 considers if there is an interaction between one’s own education
+level and the education level of ego’s social circle. The theory here being
+that the interaction should be positive, indicating that ego can get even more
+excitement out of life if ego is highly educated and the alters are too, since it
+makes the opportunities even bigger (since maybe money is no object) or
+that interactions are even funnier (because everyone is getting everyone
+else’s jokes). There might be just some synergy among all of the people that
+just generates even more excitement. The results do show a positive
+coefficient on the interaction (0.0004), as predicted, but it is not statistically
+significant. That means that ego’s education and the social circle’s
+educations are important, but they do not reinforce or magnify each other.
+They just work additively.
+Model 4:
+> summary(lm(rlife ~ aveeduc + aveeduc*educ + numgiven + age +
+attend + as.factor(marital) + as.factor(race) + childs + sex ,
+data=gss))
+Coefficients:
+Estimate Std. Error t value Pr(>|t|)
+(Intercept) 2.0193692 0.1826715 11.055 < 2e�16 ***
+aveeduc 0.0655863 0.0390566 1.679 0.093332 .
+educ 0.0132145 0.0132620 0.996 0.319227
+numgiven 0.0233470 0.0107467 2.172 0.029993 *
+age �0.0034310 0.0011552 �2.970 0.003029 **
+attend 0.0177239 0.0058730 3.018 0.002593 **
+as.factor(marital)2 �0.0552918 0.0645263 �0.857 0.391659
+as.factor(marital)3 0.0469233 0.0503984 0.931 0.351995
+as.factor(marital)4 0.0595287 0.0837440 0.711 0.477305
+as.factor(marital)5 0.1595371 0.0472431 3.377 0.000754 ***
+as.factor(race)2 �0.1883769 0.0578418 �3.257 0.001155 **
+as.factor(race)3 �0.1260843 0.0921429 �1.368 0.171428
+childs 0.0242733 0.0103037 2.356 0.018626 *
+sex �0.0439882 0.0319638 �1.376 0.168992
+aveeduc:educ 0.0003993 0.0028891 0.138 0.890086
+���
+Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Residual standard error: 0.5634 on 1348 degrees of freedom
+(9703 observations deleted due to missingness)
+Multiple R�squared: 0.1091, Adjusted R�squared: 0.09989
+F�statistic: 11.8 on 14 and 1348 DF, p�value: < 2.2e�16
+Model 5 considers if the diversity of educations of one’s social circle affects
+how much excitement one derives from life. The effect of diversity could
+work in opposite ways. On the one hand, it could make everything in life
+even more exciting, since “variety is the spice of life.” We would expect a
+positive coefficient then. On the other hand, increased educational diversity
+of the social circle could make it harder to manage relationships and make
+life more arduous, which might make it less exciting.
+I constructed the standard deviation of the network analogously to how I did
+the mean, thusly:
+> educs = c("educ1", "educ2", "educ3", "educ4", "educ5")
+> sub <� gss[, educs]
+> sub2=transform(sub, SD=apply(sub,1, sd, na.rm = TRUE))
+> colnames(sub2)[6] <� "sdeduc"
+> gss <� data.frame(gss, sub2[,"sdeduc"])
+> colnames(gss)
+> colnames(gss)[2112] <� "sdeduc”
+Results are in Model 5. They indicate a negative but statistically insignificant
+effect on one’s excitement with life. It does not look like diversity of one’s
+social circle’s educations matters here.
+Model 5:
+> summary(lm(rlife ~ aveeduc + aveeduc + educ + numgiven +
+sdeduc + age + attend + as.factor(marital) + as.factor(race) +
+childs + sex , data=gss))
+Coefficients:
+Estimate Std. Error t value Pr(>|t|)
+(Intercept) 2.015540 0.129520 15.562 < 2e�16 ***
+aveeduc 0.091402 0.015494 5.899 4.84e�09 ***
+educ 0.010265 0.007380 1.391 0.164555
+numgiven 0.029950 0.014077 2.128 0.033594 *
+sdeduc �0.012333 0.020990 �0.588 0.556931
+age �0.004520 0.001305 �3.464 0.000553 ***
+attend 0.016317 0.006366 2.563 0.010500 *
+as.factor(marital)2 0.023049 0.073005 0.316 0.752272
+as.factor(marital)3 0.024880 0.054716 0.455 0.649403
+as.factor(marital)4 0.074293 0.092186 0.806 0.420469
+as.factor(marital)5 0.156984 0.050136 3.131 0.001787 **
+as.factor(race)2 �0.194711 0.065949 �2.952 0.003219 **
+as.factor(race)3 �0.178358 0.103187 �1.729 0.084176 .
+childs 0.023367 0.011536 2.026 0.043042 *
+sex �0.043652 0.034637 �1.260 0.207838
+���
+Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Residual standard error: 0.5541 on 1109 degrees of freedom
+(9942 observations deleted due to missingness)
+Multiple R�squared: 0.1177, Adjusted R�squared: 0.1066
+F�statistic: 10.57 on 14 and 1109 DF, p�value: < 2.2e�16
+6. And give your best conclusion as to whether your initial hypothesis held up -
+and if not, why not.
+I have given my conclusions throughout, but in summary, the answer
+appears to be “yes, one’s social circle’s average education does influence
+how exciting life seems.” The exact nature of the causality here is yet to be
+determined, but we have made it part of the way there.
+
+```{r}
+
+### Libraries----
+library(data.table)
+library(dplyr)
+library(plyr)
+library(ggplot2)
+library(igraph)
+
+### import data----
+netw <- read.csv("http://moreno.ss.uci.edu/ffe.dat", header=T, sep=";", skip= 36)
+netw = setDT(netw)[, tstrsplit(DATA., ' ')]
+netw = netw[,V1:=NULL]
+View(netw)
+
+
+#splitting the network data to advice/friendship/report
+influence <- as.matrix(slice(netw, 1:28))
+elite <- as.matrix(slice(netw, 29:56))
+friend <- as.matrix(slice(netw, 57:84))
+```
+
+```{r}
+#importing attributes data
+setwd("/Users/garyair/Desktop/Dropbox/Columbia/SNA/Labs/SNA-EgoNetwork-1/French elite/")
+attributes <- read.csv("attributes.csv", header=TRUE)
+View(attributes)
+
+#Clean missing data in attributes
+attributes$igyear <- NULL
+attributes$birthplace <- NULL
+attributes$polyyear <- NULL
+attributes$enayear <- NULL
+attributes$zipcode <- NULL
+
+
+#We decide to restrict our analysis to 3 major topics: age, education and religion. Hence, we delete other attributes
+attributes$fathers.lev <- NULL
+attributes$masons <- NULL
+attributes$socialreg <- NULL
+attributes$eliteprom <- NULL
+attributes$prestige <- NULL
+attributes$clubs <- NULL
+attributes$topboards <- NULL
+attributes$inspec.gen <- NULL
+attributes$cabinet <- NULL
+attributes$finance.min <- NULL
+attributes$party <- NULL
+attributes$elitevote <- NULL
+
+
+#Cleaning and polishing data
+names(attributes)
+#"sciencepoly" "polytech"    "university"  "normal.sch"  "ena" "religion" 
+attributes$sciencepoly[attributes$sciencepoly == 2] <- FALSE
+attributes$sciencepoly[attributes$sciencepoly == 1] <- TRUE
+
+attributes$polytech[attributes$polytech == 2] <- FALSE
+attributes$polytech[attributes$polytech == 1] <- TRUE
+
+attributes$university[attributes$university == 2] <- FALSE
+attributes$university[attributes$university == 1] <- TRUE
+
+attributes$normal.sch[attributes$normal.sch == 2] <- FALSE
+attributes$normal.sch[attributes$normal.sch == 1] <- TRUE
+
+attributes$ena[attributes$ena == 2] <- FALSE
+attributes$ena[attributes$ena == 1] <- TRUE
+
+
+```
+
+
+
+```{r}
+
+
+summary(lm(Influence.degree~ religion, attributes))
+summary(lm(Influence.transitivity~ religion, attributes))
+
+summary(lm(Influence.degree ~ ena + sciencepoly + polytech + university + normal.sch, attributes))
+summary(lm(Influence.transitivity~ ena + sciencepoly + polytech + university + normal.sch, attributes))
+
+```
+
+
+
+Studying Elite : "WHO IS IN THE ELITE"
+
+```{r}
+View(elite)
+
+
+### calculate degree, ego network size ###
+attributes$elite.degree <- degree(eliteg)
+summary(lm(elite.degree~ religion, attributes))
+ggplot(attributes$religion, attributes$elite.degree)
+summary(lm(elite.degree ~ ena + sciencepoly + polytech + university + normal.sch, attributes))
+```
+
+```{r}
+### calculate transitivity of ego network ###
+attributes$elite.transitivity =transitivity(eliteg, type="local")  
+attributes$elite.transitivity[attributes$elite.transitivity == "NaN"] <- mean(attributes$elite.transitivity)
+summary(lm(elite.transitivity~ religion, attributes))
+summary(lm(elite.transitivity~ ena + sciencepoly + polytech + university + normal.sch, attributes))
+
+```

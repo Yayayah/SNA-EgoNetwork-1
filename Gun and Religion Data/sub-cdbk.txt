@@ -1,0 +1,2897 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                      CODEBOOK
+
+
+                  2000 American National Election Study (Vers. 2)
+                                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page i
+
+
+                                      CONTENTS
+
+
+      item                                                                page
+
+      CASEID                                                                 1
+      v728               M6a. R-gun control scale                            1
+      v729               M6a1. R-strength more gun control                   2
+      v730               M6a2. R-strength less gun control                   3
+      v731               M6ax. Summary gun control                           4
+      v732               M6a3. R-importance of gun control                   5
+      v733               M6b. Gore plcmnt-gun control scale                  6
+      v734               M6b1/b2. Gore-strength more/less gun ctl            7
+      v735               M6bx. Summary Gore gun control                      8
+      v736               M6b3. Gore-certain gun control placement            9
+      v737               M6c. Bush plcmnt-gun control scale                 10
+      v738               M6c1/c2. Bush-strength more/less gun ctl           11
+      v739               M6cx. Summary Bush gun control                     12
+      v740               M6c3. Bush-certain gun control placement           13
+      v872               S1. Is religion important to R                     14
+      v873               S2. How much guidance from religion                15
+      v874               S3/S3.T. How often does R pray                     16
+      v875               S4/S4.T. How often does R read the bible           17
+      v876               S5/S5.T. Bible is word of God or men               18
+      v877               X1. Attend religious services                      19
+      v878               X1a. Part of a church or denomination              20
+      v879               X2. Attend religious services how often            21
+      v880               X2a. Attend relig serv > once/week                 22
+      v881               X3. Attend church checkpoint                       23
+      v882               X3a. Attend protestant/Cath/Jewish/other           24
+      v883               X3b. Belong protestant/Cath/Jewish/other           25
+      v884               X4. Denomination/other specify                     26
+      v885               X4(1). (blanked) denomination other                28
+      v886               X4a. Baptist group                                 29
+      v887               X4b. Independent Baptist group                     30
+      v888               X4c. Lutheran group                                31
+      v889               X4d. Methodist group                               32
+      v890               X4e. Presbyterian group                            33
+      v891               X4f. Reformed group                                34
+      v892               X4g. Brethren group                                35
+      v893               X4h. Christian group                               36
+      v894               X4i. Church of Christ group                        37
+      v895               X4j. Church of God group                           38
+      v896               X4k. (blanked) holiness/pentacostal                39
+      v897               X4a-j. (blanked) other                             39
+      v898               X4m. (blanked) other group/denomination            40
+      v899               X4m1. Is other group christian                     41
+      v900               X6a. Attend Jewish group                           42
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page ii
+
+
+      item                                                                page
+
+      v901               X6b. Jewish denomination                           43
+      v902               X7. Member place of worship                        44
+      v903               X8. Born-again christian                           45
+      v904               X9x. Religion summary                              46
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 1
+
+
+      CASEID
+
+           Data type: numeric
+           Record/columns: 1/1-4
+
+      ________________________________________________________________________
+
+      v728               M6a. R-gun control scale
+
+
+           M6a.
+
+               Do you think the federal government should make it more
+               difficult for people to buy a gun than it is  now, make
+               it easier for people to buy a gun, or keep these rules
+               about the same as they are now?
+               --------------------------------------------------
+
+               1. MORE DIFFICULT                   --> SKIP TO M6a1
+               3. MAKE IT EASIER                   --> SKIP TO M6a2
+               5. KEEP THESE RULES ABOUT THE SAME  --> SKIP TO M6a3
+
+               8. DK                               --> SKIP TO M6a3
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  MORE DIFFICULT
+               3  MAKE IT EASIER
+               5  KEEP THESE RULES ABOUT THE SAME
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 2
+
+
+      v729               M6a1. R-strength more gun control
+
+
+           M6a1.
+
+           IF R SAYS GOVT SHOULD MAKE IT MORE DIFFICULT TO BUY A GUN:
+
+               A lot more difficult or somewhat more difficult?
+               --------------------------------------------------
+
+               1. A LOT MORE DIFFICULT      --> SKIP TO M6a3
+               5. SOMEWHAT MORE DIFFICULT   --> SKIP TO M6a3
+
+               8. DK                        --> SKIP TO M6a3
+               9. RF
+               0. NA; INAP, 3,5,8,9,0 in M6a
+
+           VALUE  LABEL
+               0  NA. INAP, 3,5,8,9,0 in M6a
+               1  A LOT MORE DIFFICULT
+               5  SOMEWHAT MORE DIFFICULT
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 3
+
+
+      v730               M6a2. R-strength less gun control
+
+
+           M6a2.
+
+           IF R SAYS GOVT SHOULD MAKE IT EASIER TO BUY A GUN:
+
+               A lot easier or somewhat easier?
+               --------------------------------------------------
+
+               1. A LOT EASIER
+               5. SOMEWHAT EASIER
+
+               8. DK
+               9. RF
+               0. NA; INAP, 1,5,8,9,0 in M6a
+
+           VALUE  LABEL
+               0  NA. INAP, 1,5,8,9,0 in M6a
+               1  A LOT EASIER
+               5  SOMEWHAT EASIER
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 4
+
+
+      v731               M6ax. Summary gun control
+
+
+           M6ax.
+
+               Do you think the federal government should make it more
+               difficult for people to buy a gun than it is  now, make
+               it easier for people to buy a gun, or keep these rules
+               about the same as they are now?
+               A lot easier/more difficult or somewhat easier/more
+               difficult?
+
+               SUMMARY: R POSITION ON GUN RESTRICTIONS
+               --------------------------------------------------
+
+               Built from M6 and M6a/b.
+
+               1. A lot more difficult
+               2. Somewhat more difficult
+               3. Keep rules about the same
+               4. Somewhat easier
+               5. A lot easier
+
+               8. DK
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  A lot more difficult
+               2  Somewhat more difficult
+               3  Keep rules about the same
+               4  Somewhat easier
+               5  A lot easier
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/12
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 5
+
+
+      v732               M6a3. R-importance of gun control
+
+
+           M6a3.
+
+           ALL GUN RESTRICTION RESPONDENTS:
+
+               How important is this issue to you personally?  Not at
+               all important, not too important, somewhat important,
+               very important, or extremely important?
+               --------------------------------------------------
+
+               1. NOT AT ALL IMPORTANT
+               2. NOT TOO IMPORTANT
+               3. SOMEWHAT IMPORTANT
+               4. VERY IMPORTANT
+               5. EXTREMELY IMPORTANT
+
+               8. DK
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  NOT AT ALL IMPORTANT
+               2  NOT TOO IMPORTANT
+               3  SOMEWHAT IMPORTANT
+               4  VERY IMPORTANT
+               5  EXTREMELY IMPORTANT
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 6
+
+
+      v733               M6b. Gore plcmnt-gun control scale
+
+
+           M6b.
+
+               Where would you place Al Gore?  Do you think he would
+               like to make it more difficult for people to buy a
+               gun, make it easier for people to buy a gun, or keep
+               these rules about the same as they are now?
+               --------------------------------------------------
+
+               [DO NOT PROBE]
+               M6c and M6c were administered in random order.
+
+               Randomization:  Randomization is documented within the
+               collection of randomization variables that appear at the end of
+               the Pre survey vars.  The question numbers for randomization
+               variables closely follow survey question numbers, preceded by
+               "Rand" [e.g. for questions A4/A5 there is a randomization
+               variable Rand.A4/A5].
+
+               1. MORE DIFFICULT
+               3. MAKE IT  EASIER
+               5. KEEP THESE RULES ABOUT THE SAME   --> SKIP TO M6b3
+
+               8. DK                                --> SKIP TO M6c
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  MORE DIFFICULT
+               3  MAKE IT EASIER
+               5  KEEP THESE RULES ABOUT THE SAME
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/16
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 7
+
+
+      v734               M6b1/b2. Gore-strength more/less gun ctl
+
+
+           M6b1/b2.
+
+           IF R THINKS GORE WOULD LIKE IT EASIER TO BUY A GUN/
+           IF R THINKS GORE WOULD LIKE IT MORE DIFFICULT TO BUY A GUN:
+
+               A lot easier or somewhat easier?/
+               A lot more difficult or somewhat more difficult?
+               --------------------------------------------------
+
+               1. A LOT       --> M6b3
+               5. SOMEWHAT    --> M6b3
+
+               8. DK          --> SKIP TO M6c
+               9. RF
+               0. NA; INAP, 5,8,9,0 in M6b
+
+           VALUE  LABEL
+               0  NA. INAP, 5,8,9,0 in M6b
+               1  A LOT
+               5  SOMEWHAT
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 8
+
+
+      v735               M6bx. Summary Gore gun control
+
+
+           M6bx.
+
+               Where would you place Al Gore?  Do you think he would
+               like to make it more difficult for people to buy a
+               gun, make it easier for people to buy a gun, or keep
+               these rules about the same as they are now?
+               A lot easier/more difficult or somewhat easier/ more
+               difficult?
+
+               SUMMARY: GORE POSITION ON GUN RESTRICTIONS
+               --------------------------------------------------
+
+               Built from M6b and M6b1/b2.
+
+               1. A lot more difficult
+               2. Somewhat more difficult
+               3. Keep rules about the same
+               4. Somewhat easier
+               5. A lot easier
+
+               8. DK
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  A lot more difficult
+               2  Somewhat more difficult
+               3  Keep rules about the same
+               4  Somewhat easier
+               5  A lot easier
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/20
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                   Page 9
+
+
+      v736               M6b3. Gore-certain gun control placement
+
+
+           M6b3.
+
+           IF R SAYS GORE WANTS MORE DIFFICULT/EASIER TO BUY GUN:
+           IF STRENGTH OF GORE PLACEMENT IS NOT DK/RF:
+
+               How certain are you of Al Gore's position? Very certain,
+               pretty certain, or not very certain?
+               --------------------------------------------------
+
+               1. VERY CERTAIN
+               3. PRETTY CERTAIN
+               5. NOT VERY CERTAIN
+
+               8. DK
+               9. RF
+               0. NA; INAP, 8,9,0 in M6b1/M6b2
+
+           VALUE  LABEL
+               0  NA. INAP, 8,9,0 in M6b1/M6b2
+               1  VERY CERTAIN
+               3  PRETTY CERTAIN
+               5  NOT VERY CERTAIN
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/22
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 10
+
+
+      v737               M6c. Bush plcmnt-gun control scale
+
+
+           M6c.
+
+               Where would you place George W. Bush?  Do you think he
+               would like to make it more difficult for people to buy a
+               gun, make it easier for people to buy a gun, or keep
+               these rules about the same as they are now?
+               --------------------------------------------------
+
+               [DO NOT PROBE]
+               M6c and M6c were administered in random order.
+
+               Randomization:  Randomization is documented within the
+               collection of randomization variables that appear at the end of
+               the Pre survey vars.  The question numbers for randomization
+               variables closely follow survey question numbers, preceded by
+               "Rand" [e.g. for questions A4/A5 there is a randomization
+               variable Rand.A4/A5].
+
+               1. MORE DIFFICULT
+               3. MAKE IT EASIER
+               5. KEEP THESE RULES ABOUT THE SAME  --> M6c2
+
+               8. DK                               --> N1/n1.e
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  MORE DIFFICULT
+               3  MAKE IT EASIER
+               5  KEEP THESE RULES ABOUT THE SAME
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/24
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 11
+
+
+      v738               M6c1/c2. Bush-strength more/less gun ctl
+
+
+           M6c1/c2.
+
+           IF R THINKS G.W. BUSH WOULD LIKE IT EASIER TO BUY A GUN/
+           IF R THINKS G.W. BUSH WOULD LIKE IT MORE DIFFICULT TO BUY A GUN:
+
+               A lot easier or somewhat easier?
+               A lot more difficult or somewhat more difficult?
+               --------------------------------------------------
+
+               1. A LOT       --> M6c3
+               5. SOMEWHAT    --> M6c3
+
+               8. DK          --> SKIP TO N1/N1.E
+               9. RF
+               0. NA; INAP, 5,8,9,0 in M6c
+
+           VALUE  LABEL
+               0  NA. INAP, 5,8,9,0 in M6c
+               1  A LOT
+               5  SOMEWHAT
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 12
+
+
+      v739               M6cx. Summary Bush gun control
+
+
+           M6cx.
+
+               Where would you place George W. Bush?  Do you think he
+               would like to make it more difficult for people to buy a
+               gun, make it easier for people to buy a gun, or keep
+               these rules about the same as they are now?
+               A lot easier/more difficult or somewhat easier/ more
+               difficult?
+
+               SUMMARY: GW BUSH POSITION ON GUN RESTRICTIONS
+               --------------------------------------------------
+
+               Built from M6c and M6c1/c2.
+
+               1. A lot more difficult
+               2. Somewhat more difficult
+               3. Keep rules about the same
+               4. Somewhat easier
+               5. A lot easier
+
+               8. DK
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  A lot more difficult
+               2  Somewhat more difficult
+               3  Keep rules about the same
+               4  Somewhat easier
+               5  A lot easier
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/28
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 13
+
+
+      v740               M6c3. Bush-certain gun control placement
+
+
+           M6c3.
+
+           IF R SAYS GW BUSH WANTS MORE DIFFICULT/EASIER TO BUY GUN:
+           IF STRENTH OF GW BUSH PLACEMENT IS NOT DK/RF:
+
+               How certain are you of George W. Bush's position? Very
+               certain, pretty certain, or not very certain?
+               --------------------------------------------------
+
+               1. VERY CERTAIN
+               3. PRETTY CERTAIN
+               5. NOT VERY CERTAIN
+
+               8. DK
+               9. RF
+               0. NA; INAP, 8,9,0 in M6c1/M6c2
+
+           VALUE  LABEL
+               0  NA. INAP, 8,9,0 in M6c1/M6c2
+               1  VERY CERTAIN
+               3  PRETTY CERTAIN
+               5  NOT VERY CERTAIN
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 14
+
+
+      v872               S1. Is religion important to R
+
+
+           S1.
+
+               Do you consider religion to be an important part of your
+               life, or not?
+               --------------------------------------------------
+
+               1. IMPORTANT
+               5. NOT IMPORTANT      --> SKIP TO S3
+
+               8. DON'T KNOW         --> SKIP TO S3
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  IMPORTANT
+               5  NOT IMPORTANT
+               8  DON'T KNOW
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 15
+
+
+      v873               S2. How much guidance from religion
+
+
+           S2.
+
+           IF R SAYS THAT RELIGION IS IMPORTANT:
+
+               Would you say your religion provides some guidance in
+               your day-to-day living, quite a bit of guidance, or a
+               great deal of guidance in your day-to-day life?
+               --------------------------------------------------
+
+               1. SOME
+               3. QUITE A BIT
+               5. A GREAT DEAL
+
+               8. DK
+               9. RF
+               0. NA; INAP, 5,8,9,0 in S1
+
+           VALUE  LABEL
+               0  NA. INAP, 5,8,9,0 in S1
+               1  SOME
+               3  QUITE A BIT
+               5  A GREAT DEAL
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/34
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 16
+
+
+      v874               S3/S3.T. How often does R pray
+
+
+           S3/S3.T.
+
+               FTF:
+               Please look at page 15 of the booklet.
+               People practice their religion in different ways.
+               Outside of attending religious services, do you pray
+               several times a day, once a day, a few times a week,
+               once a week or less or never?
+
+               TELEPHONE:
+               People practice their religion in different ways.
+               Outside of attending religious services, do you pray
+               several times a day, once a day, a few times a week,
+               once a week or less or never?
+               --------------------------------------------------
+
+               1. SEVERAL TIMES A DAY
+               2. ONCE A DAY
+               3. A FEW TIMES A WEEK
+               4. ONCE A WEEK OR LESS
+               5. NEVER
+               7. OTHER (SPECIFY)
+
+               8. DK
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  SEVERAL TIMES A DAY
+               2  ONCE A DAY
+               3  A FEW TIMES A WEEK
+               4  ONCE A WEEK OR LESS
+               5  NEVER
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/36
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 17
+
+
+      v875               S4/S4.T. How often does R read the bible
+
+
+           S4/S4.T.
+
+               FTF:
+               Still looking at page 15 of the booklet.
+               Outside of attending religious services, do you read the
+               Bible several times a day, once a day, a few times a
+               week, once a week or less or never?
+
+               TELEPHONE:
+               Outside of attending religious services, do you read the
+               Bible several times a day, once a day, a few times a
+               week, once a week or less or never?
+               --------------------------------------------------
+
+               1. SEVERAL TIMES A DAY
+               2. ONCE A DAY
+               3. A FEW TIMES A WEEK
+               4. ONCE A WEEK OR LESS
+               5. NEVER
+               7. OTHER (SPECIFY)
+
+               8. DK
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  SEVERAL TIMES A DAY
+               2  ONCE A DAY
+               3  A FEW TIMES A WEEK
+               4  ONCE A WEEK OR LESS
+               5  NEVER
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/38
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 18
+
+
+      v876               S5/S5.T. Bible is word of God or men
+
+
+           S5/S5.T.
+
+               FTF:
+               Please look at page 16 of the booklet.
+               Which of these statements comes closest to describing
+               your feelings about the Bible? You can just give me
+               the number of your choice.
+
+               TELEPHONE:
+               I am going to read you a short list of statements.
+               Please tell me which of these statements comes closest to
+               describing your feelings about the Bible?  You can just
+               give me the number of the statement you choose.
+               --------------------------------------------------
+
+               1. THE BIBLE IS THE ACTUAL WORD OF GOD AND IS TO BE TAKEN
+                  LITERALLY, WORD FOR WORD.
+               2. THE BIBLE IS THE WORD OF GOD BUT NOT EVERYTHING IN IT SHOULD
+                  BE TAKEN LITERALLY, WORD FOR WORD.
+               3. THE BIBLE IS A BOOK WRITTEN BY MEN AND IS NOT THE WORD OF GOD.
+               7. OTHER (SPECIFY) [VOL]
+
+               8. DK
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  THE BIBLE IS THE ACTUAL WORD OF GOD A
+               2  THE BIBLE IS THE WORD OF GOD BUT NOT
+               3  THE BIBLE IS A BOOK WRITTEN BY MEN AN
+               7  OTHER (SPECIFY) (VOL)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/40
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 19
+
+
+      v877               X1. Attend religious services
+
+
+           X1.
+
+               Lots of things come up that keep people from attending
+               religious services even if they want to. Thinking about
+               your life these days, do you ever attend religious
+               services, apart from occasional weddings, baptisms or
+               funerals?
+               --------------------------------------------------
+
+               1. YES  --> SKIP TO X2
+               5. NO   --> SKIP TO X1a
+
+               8. DK   --> SKIP TO X1a
+               9. RF
+               0. NA
+
+           VALUE  LABEL
+               0  NA
+               1  YES
+               5  NO
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/42
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 20
+
+
+      v878               X1a. Part of a church or denomination
+
+
+           X1a.
+
+           IF R DOES NOT ATTEND RELIGIOUS SERVICES:
+
+               Regardless of whether you now attend any religious
+               services do you ever think of yourself as part of a
+               particular church or denomination?
+               --------------------------------------------------
+
+               1. YES            --> X3
+               5. NO             --> GO TO Y1
+
+               8. DK             --> GO TO Y1
+               9. RF
+               0. NA; INAP, 1,9,0 in X1
+
+           VALUE  LABEL
+               0  NA. INAP, 1,9,0 in X1
+               1  YES
+               5  NO
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/44
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 21
+
+
+      v879               X2. Attend religious services how often
+
+
+           X2.
+
+           IF R ATTENDS RELIGIOUS SERVICES:
+
+               Do you go to religious services every week, almost every
+               week, once or twice a month, a few times a year, or
+               never?
+               --------------------------------------------------
+
+               1. EVERY WEEK             --> X2a
+               2. ALMOST EVERY WEEK      --> X3
+               3. ONCE OR TWICE A MONTH  --> X3
+               4. A FEW TIMES A YEAR     --> X3
+               5. NEVER                  --> X3
+
+               8. DK                     --> X3
+               9. RF
+               0. NA; INAP, 0,5,8,9 in X1
+
+           VALUE  LABEL
+               0  NA. INAP, 0,5,8,9 in X1
+               1  EVERY WEEK
+               2  ALMOST EVERY WEEK
+               3  ONCE OR TWICE A MONTH
+               4  A FEW TIMES A YEAR
+               5  NEVER
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/46
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 22
+
+
+      v880               X2a. Attend relig serv > once/week
+
+
+           X2a.
+
+           IF R SAYS ATTENDS RELIGIOUS SERVICES 'EVERY WEEK':
+
+               Would you say you go to religious services once a week
+               or more often than once a week?
+               --------------------------------------------------
+
+               1. ONCE A WEEK
+               2. MORE OFTEN THAN ONCE A WEEK
+
+               8. DK
+               9. RF
+               0. NA; INAP, 5,8,9, 0 in X1; 2-5,8,9 or NA in X2
+
+           VALUE  LABEL
+               0  NA. INAP, 5,8,9, 0 in X1. 2-5,8,9 or
+               1  ONCE A WEEK
+               2  MORE OFTEN THAN ONCE A WEEK
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/48
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 23
+
+
+      v881               X3. Attend church checkpoint
+
+
+           X3.
+
+           IF R ATTENDS CHURCH: /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH OR
+           DENOMINATION:
+
+               CHECKPOINT: CHURCH ATTENDANCE
+               --------------------------------------------------
+
+               1. YES                 --> X3a
+               5. NO  (5 in X1)       --> X3b
+
+               9. RF (9 in X1)
+               0. INAP, 0 in X1
+
+           VALUE  LABEL
+               0  INAP, 0 in X1
+               5  NO (5 in X1)
+               9  RF (9 in X1)
+
+           Data type: numeric
+           Missing-data codes: 0,9-*
+           Record/column: 1/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 24
+
+
+      v882               X3a. Attend protestant/Cath/Jewish/other
+
+
+           X3a.
+
+           IF R ATTENDS RELIGIOUS SERVICES:
+
+               Do you mostly attend a place of worship that is
+               Protestant, Roman Catholic, Jewish, or something else?
+               --------------------------------------------------
+
+               1. PROTESTANT   --> X4
+               2. CATHOLIC     --> X7
+               3. JEWISH       --> X6a
+               7. OTHER        --> X4
+
+               8. DK           --> SKIP TO Y1
+               9. RF
+               0. NA; INAP, 0,5,9 in X3
+
+           VALUE  LABEL
+               0  NA. INAP, 0,5,9 in X3
+               1  PROTESTANT
+               2  CATHOLIC
+               3  JEWISH
+               7  OTHER
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/52
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 25
+
+
+      v883               X3b. Belong protestant/Cath/Jewish/other
+
+
+           X3b.
+
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH OR
+           DENOMINATION:
+
+               Do you consider yourself Protestant, Roman Catholic,
+               Jewish, or something else?
+               --------------------------------------------------
+
+               1. PROTESTANT   --> X4
+               2. CATHOLIC     --> SKIP TO X7
+               3. JEWISH       --> SKIP TO X6b
+               7. OTHER        --> X4
+
+               8. DK           --> SKIP TO Y1
+               9. RF
+               0. NA; INAP, 5,8,9 or NA in X1a; 1,0,9 in X3
+
+           VALUE  LABEL
+               0  NA. INAP, 5,8,9 or NA in X1a. 1,0,9 i
+               1  PROTESTANT
+               2  CATHOLIC
+               3  JEWISH
+               7  OTHER
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/54
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 26
+
+
+      v884               X4. Denomination/other specify
+
+
+           X4.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER'/
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH OR
+           DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER':
+
+               What church or denomination is that?
+               --------------------------------------------------
+
+               1.  BAPTIST                                   --> SKIP TO X4b
+               2.  EPISCOPALIAN/ANGLICAN/CHURCH OF ENGLAND   --> SKIP TO X7
+               3.  LUTHERAN                                  --> SKIP TO X4c
+               4.  METHODIST                                 --> SKIP TO X4d
+               5.  JUST PROTESTANT                           --> SKIP TO X7
+               6.  PRESBYTERIAN                              --> SKIP TO X4e
+               7.  REFORMED                                  --> SKIP TO X4f
+               8.  BRETHREN                                  --> SKIP TO X4g
+               9.  EVANGELICAL UNITED BRETHREN               --> SKIP TO X7
+               10. CHRISTIAN OR JUST CHRISTIAN               --> SKIP TO X4h
+               11. CHRISTIAN SCIENTIST                       --> SKIP TO X7
+               12. CHURCH (or CHURCHES) OF CHRIST            --> SKIP TO X4i
+               13. UNITED CHURCH OF CHRIST                   --> SKIP TO X7
+               14. DISCIPLES OF CHRIST                       --> SKIP TO X7
+               15. CHURCH OF GOD                             --> SKIP TO X4j
+               16. ASSEMBLY OF GOD                           --> SKIP TO X7
+               17. CONGREGATIONALIST                         --> SKIP TO X7
+               18. HOLINESS                                  --> SKIP TO X4k
+               19. PENTACOSTAL                               --> SKIP TO X4k
+               20. FRIENDS, QUAKER                           --> SKIP TO X7
+               21. ORTHODOX, e.g. Greek, Russian (SPECIFY);C --> SKIP TO X7
+               22. NON-DENOMINATIONAL - PROTESTANT           --> SKIP TO X7
+               23. MORMONS                                   --> SKIP TO X7
+               24. JEHOVAH'S WITNESSES                       --> SKIP TO X7
+               25. LATTER DAY SAINTS                         --> SKIP TO X7
+               26. UNITARIAN/UNIVERSALIST                    --> SKIP TO X7
+               27. BUDDHIST                                  --> SKIP TO X7
+               28. HINDU                                     --> SKIP TO X7
+               29. MUSLIM/ISLAM                              --> SKIP TO X7
+               30. NATIVE AMERICAN                           --> SKIP TO X7
+
+               95. NA
+               98. DK                                        --> SKIP TO X7
+               99. RF
+               00. INAP, 9,0 in X1; 5,8,9 or NA in X1a; 2,3,8,9 or NA in X3a/b
+               90. OTHER (SPECIFY)                           --> SKIP TO X4m
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 27
+
+
+
+           VALUE  LABEL
+               0  INAP, 9,0 in X1. 5,8,9 or NA in X1a.
+               1  BAPTIST
+               2  EPISCOPALIAN/ANGLICAN/CHURCH OF ENGL
+               3  LUTHERAN
+               4  METHODIST
+               5  JUST PROTESTANT
+               6  PRESBYTERIAN
+               7  REFORMED
+               8  BRETHREN
+               9  EVANGELICAL UNITED BRETHREN
+              10  CHRISTIAN OR JUST CHRISTIAN
+              11  CHRISTIAN SCIENTIST
+              12  CHURCH (or CHURCHES) OF CHRIST
+              13  UNITED CHURCH OF CHRIST
+              14  DISCIPLES OF CHRIST
+              15  CHURCH OF GOD
+              16  ASSEMBLY OF GOD
+              17  CONGREGATIONALIST
+              18  HOLINESS
+              19  PENTACOSTAL
+              20  FRIENDS, QUAKER
+              21  ORTHODOX, e.g. Greek, Russian (SPECI
+              22  NON-DENOMINATIONAL - PROTESTANT
+              23  MORMONS
+              24  JEHOVAH'S WITNESSES
+              25  LATTER DAY SAINTS
+              26  UNITARIAN/UNIVERSALIST
+              27  BUDDHIST
+              28  HINDU
+              29  MUSLIM/ISLAM
+              30  NATIVE AMERICAN
+              90  OTHER (SPECIFY)
+              95  NA
+              98  DK
+              99  RF
+
+           Data type: numeric
+           Missing-data codes: 0,95-*
+           Record/columns: 1/56-57
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 28
+
+
+      v885               X4(1). (blanked) denomination other
+
+
+           X4(1).
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER'/
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER':
+           IF R DENOMINATION IS 'OTHER':
+
+               What church or denomination is that?
+
+               TEXT OF X4 DENOMINATION CODE 90 'OTHER' (BLANKED)
+               --------------------------------------------------
+
+               This variable has been blanked to preserve confidentiality.
+
+           Data type: character
+           Record/column: 1/60
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 29
+
+
+      v886               X4a. Baptist group
+
+
+           X4a.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS BAPTIST IN X4:
+
+               With which Baptist group is your church associated?
+               Is it the Southern Baptist Convention, the American
+               Baptist Churches in the U.S.A., the American Baptist
+               Association, an independent Baptist church or some other
+               Baptist group?
+               --------------------------------------------------
+
+               1. SOUTHERN BAPTIST CONVENTION        --> X7
+               2. AMERICAN BAPTIST CHURCHES IN USA   --> X7
+               3. AMERICAN BAPTIST ASSOCIATION       --> X7
+               4. INDEPENDENT BAPTIST                --> X7
+               7. OTHER (SPECIFY)                    --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 0,2-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,2-99 in X4
+               1  SOUTHERN BAPTIST CONVENTION
+               2  AMERICAN BAPTIST CHURCHES IN USA
+               3  AMERICAN BAPTIST ASSOCIATION
+               4  INDEPENDENT BAPTIST
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/63
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 30
+
+
+      v887               X4b. Independent Baptist group
+
+
+           X4b.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS BAPTIST IN X4:
+           IF R'S CHURCH IS INDEPENDENT BAPTIST:
+
+               Are you affiliated with any larger Baptist group or is
+               this strictly a local church?
+               --------------------------------------------------
+
+               1. LARGER BAPTIST GROUP [SPECIFY]   --> X7
+               2. LOCAL                            --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 1-3,7,8,9,0 in X4a
+
+           VALUE  LABEL
+               0  NA. INAP, 1-3,7,8,9,0 in X4a
+               1  LARGER BAPTIST GROUP (SPECIFY)
+               2  LOCAL
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/65
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 31
+
+
+      v888               X4c. Lutheran group
+
+
+           X4c.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS LUTHERAN IN X4:
+
+               Is this church part of the Evangelical Lutheran Church in
+               American, the Missouri Synod, or some other Lutheran
+               group?
+               --------------------------------------------------
+
+               1. EVANGELICAL LUTHERAN CHURCH      --> X7
+               2. MISSOURI SYNOD                   --> X7
+               7. OTHER [SPECIFY]                  --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 0,1,2,4-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1,2,4-99 in X4
+               1  EVANGELICAL LUTHERAN CHURCH
+               2  MISSOURI SYNOD
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/67
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 32
+
+
+      v889               X4d. Methodist group
+
+
+           X4d.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS METHODIST IN X4:
+
+               Is your church part of the United Methodist Church,
+               African Methodist Episcopal, or some  other Methodist
+               group?
+               --------------------------------------------------
+
+               1. UNITED METHODIST CHURCH      --> X7
+               2. AFRICAN METHODIST EPISCOPAL  --> X7
+               7. OTHER [SPECIFY]              --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 0,1-3,5-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1-3,5-99 in X4
+               1  UNITED METHODIST CHURCH
+               2  AFRICAN METHODIST EPISCOPAL
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/69
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 33
+
+
+      v890               X4e. Presbyterian group
+
+
+           X4e.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS PRESBYTERIAN IN X4:
+
+               Is this the Presbyterian Church in the USA or some other
+               Presbyterian group?
+               --------------------------------------------------
+
+               1. PRESBYTERIAN CHURCH USA (FORMERLY
+                  UNITED PRESBYTERIAN CHURCH)       --> X7
+               7. OTHER [SPECIFY]                   --> X7
+
+               8. DK                                --> X7
+               9. RF
+               0. NA; INAP, 0,1-5,7-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1-5,7-99 in X4
+               1  PRESBYTERIAN CHURCH USA (FORMERLY
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/71
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 34
+
+
+      v891               X4f. Reformed group
+
+
+           X4f.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS REFORMED IN X4:
+
+               Is this the Christian Reformed Church, the Reformed
+               Church in America or some  Other Reformed group?
+               --------------------------------------------------
+
+               1. CHRISTIAN REFORMED CHURCH          --> X7
+               2. THE REFORMED CHURCH IN AMERICA     --> X7
+               7. OTHER [SPECIFY]                    --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 0,1-6,8-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1-6,8-99 in X4
+               1  CHRISTIAN REFORMED CHURCH
+               2  THE REFORMED CHURCH IN AMERICA
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/73
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 35
+
+
+      v892               X4g. Brethren group
+
+
+           X4g.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS BRETHREN IN X4:
+
+               Is this the church of the Brethren, the Plymouth
+               Brethren, or what?
+               --------------------------------------------------
+
+               1. CHURCH OF THE BRETHREN             --> X7
+               2. THE PLYMOUTH BRETHREN              --> X7
+               7. OTHER [SPECIFY]                    --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 0,1-7,9-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1-7,9-99 in X4
+               1  CHURCH OF THE BRETHREN
+               2  THE PLYMOUTH BRETHREN
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/75
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 36
+
+
+      v893               X4h. Christian group
+
+
+           X4h.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R SAYS DENOMINATION IS 'CHRISTIAN' IN X4:
+
+               When you say "Christian" does that mean the denomination
+               called the "Christian Church Disciples of Christ," or
+               some other Christian denomination, or do you mean to say
+               "I am just a Christian"?
+               --------------------------------------------------
+
+               1. DISCIPLES OF CHRIST                --> X7
+               2. I AM JUST A CHRISTIAN              --> X7
+               7. OTHER [SPECIFY]                    --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 0,1-9,11-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1-9,11-99 in X4
+               2  I AM JUST A CHRISTIAN
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/77
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 37
+
+
+      v894               X4i. Church of Christ group
+
+
+           X4i.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS CHURCH OF CHRIST IN X4:
+
+               Is this the Church of Christ or the United Church of
+               Christ?
+               --------------------------------------------------
+
+               1. CHURCH OF CHRIST                   --> X7
+               2. UNITED CHURCH OF CHRIST            --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 0,1-11,13-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1-11,13-99 in X4
+               1  CHURCH OF CHRIST
+               2  UNITED CHURCH OF CHRIST
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/79
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 38
+
+
+      v895               X4j. Church of God group
+
+
+           X4j.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS CHURCH OF GOD IN X4:
+
+               Is this the Church of God of Anderson, Indiana; the
+               Church of God of Cleveland, Tennessee; the Church of God
+               in Christ; or some other Church of God?
+               --------------------------------------------------
+
+               1. ANDERSON, INDIANA                  --> X7
+               2. CLEVELAND, TENNESSEE               --> X7
+               3. CHURCH OF GOD IN CHRIST            --> X7
+               7. OTHER [SPECIFY]                    --> X7
+
+               8. DK                                 --> X7
+               9. RF
+               0. NA; INAP, 0,1-14,16-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1-14,16-99 in X4
+               1  ANDERSON, INDIANA
+               2  CLEVELAND, TENNESSEE
+               3  CHURCH OF GOD IN CHRIST
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/81
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 39
+
+
+      v896               X4k. (blanked) holiness/pentacostal
+
+
+           X4k.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION IS HOLINIESS OR PENTACOSTAL IN X4:
+
+               What kind of church is that?  What is it called exactly?
+               Is that part of a larger church or denomination?
+               What is the church called?
+
+               HOLINESS OR PENTACOSTAL TEXT (18 and 19 in X4)
+               --------------------------------------------------
+
+               [THESE QUESTIONS ARE PROBES.  USE THESE AND OTHERS TO GET
+               AS MUCH SPECIFIC INFORMATION AS POSSIBLE]
+               This field has been blanked.  The open-ended responses are
+               hand-coded into the religion summary variable.
+
+           Data type: character
+           Record/column: 1/84
+
+      ________________________________________________________________________
+
+      v897               X4a-j. (blanked) other
+
+
+           X4a-j.
+
+           IF R'S DENOMINATION SPECIFIES 'OTHER' IN X4a-X4k:
+
+               TEXT OF OTHER (SPECIFY) IN DENOMINATIONAL FOLLOWUPS:
+               --------------------------------------------------
+
+               This field has been blanked.  The open-ended responses are
+               hand-coded into the religion summary variable.
+
+           Data type: character
+           Record/column: 1/88
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 40
+
+
+      v898               X4m. (blanked) other group/denomination
+
+
+           X4m.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF PROTESTANT OR 'OTHER' IN X3b:
+           IF R DENOMINATION 'OTHER' IN X4:
+
+               What is it called exactly?  Is that church part of a
+               denomination?
+               --------------------------------------------------
+
+               [USE ANY OR ALL AS NECESSARY; GET AS MUCH DETAIL AS POSSIBLE]
+               This field has been blanked.  The open-ended responses are
+               hand coded into the religion summary variable.
+
+           Data type: character
+           Record/column: 1/92
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 41
+
+
+      v899               X4m1. Is other group christian
+
+
+           X4m1.
+
+           IF R ATTENDS CHURCH AND ATTENDS AS PROTESTANT OR 'OTHER' IN X3a /
+           IF R DOES NOT ATTEND CHURCH BUT THINKS OF SELF AS PART OF CHURCH
+             OR DENOMINATION AND CONSIDERS SELF 'OTHER' IN X3b:
+           IF R DENOMINATION 'OTHER' IN X4:
+
+               Is that group Christian?
+               --------------------------------------------------
+
+               1. YES                  --> X7
+               5. NO                   --> X7
+
+               8. DK                   --> X7
+               9. RF
+               0. NA; INAP, 0,1-30,95-99 in X4
+
+           VALUE  LABEL
+               0  NA. INAP, 0,1-30,95-99 in X4
+               1  YES
+               5  NO
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/95
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 42
+
+
+      v900               X6a. Attend Jewish group
+
+
+           X6a.
+
+           IF R ATTENDS RELIGIOUS SERVICES AND IS JEWISH IN X3a:
+
+               Do you usually attend a synagogue or temple that is
+               Orthodox, Conservative, Reform or what?
+               --------------------------------------------------
+
+               1. ORTHODOX`            --> X7
+               2. CONSERVATIVE         --> X7
+               3. REFORM               --> X7
+               7. OTHER [SPECIFY]      --> X7
+
+               8. DK                   --> X7
+               9. RF
+               0. NA; INAP, 1,2,7,8,9,0 in X3a
+
+           VALUE  LABEL
+               0  NA. INAP, 1,2,7,8,9,0 in X3a
+               1  ORTHODOX`
+               2  CONSERVATIVE
+               3  REFORM
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/97
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 43
+
+
+      v901               X6b. Jewish denomination
+
+
+           X6b.
+
+           IF R DOES NOT ATTEND RELIGIOUS SERVICES BUT THINKS OF SELF AS PART OF
+             CHURCH OR DENOMINATION AND CONSIDERS SELF JEWISH IN X3b:
+
+               Do you consider yourself Orthodox, Conservative, Reform,
+               or what?
+               --------------------------------------------------
+
+               1. ORTHODOX               --> X7
+               2. CONSERVATIVE           --> X7
+               3. REFORM                 --> X7
+               7. OTHER [SPECIFY]        --> X7
+
+               8. DK                     --> X7
+               9. RF
+               0. NA; INAP, 1,2,7,8,9,0 in X3b
+
+           VALUE  LABEL
+               0  NA. INAP, 1,2,7,8,9,0 in X3b
+               1  ORTHODOX
+               2  CONSERVATIVE
+               3  REFORM
+               7  OTHER (SPECIFY)
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/99
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 44
+
+
+      v902               X7. Member place of worship
+
+
+           X7.
+
+           IF R ATTENDS RELIGIOUS SERVICES/
+           IF R DOES NOT ATTEND RELIGIOUS SERVICES BUT THINKS OF SELF AS PART OF
+             CHURCH OR DENOMINATION:
+
+               Are you officially a member of a parish, congregation,
+               temple or other place of worship?
+               --------------------------------------------------
+
+               1. YES         --> X8 or Y1
+               5. NO          --> X8 or Y1
+
+               8. DK          --> X8 or Y1
+               9. RF
+               0. NA; INAP, 0,9 in X1; 5,8,9 or NA in X1a
+
+           VALUE  LABEL
+               0  NA. INAP, 0,9 in X1. 5,8,9 or NA in X
+               1  YES
+               5  NO
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/101
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 45
+
+
+      v903               X8. Born-again christian
+
+
+           X8.
+
+           IF R ATTENDS RELIGIOUS SERVICES/
+           IF R DOES NOT ATTEND RELIGIOUS SERVICES BUT THINKS OF SELF AS PART OF
+             A CHURCH OR DENOMINATION:
+           IF R IDENTIFIES A CHRISTIAN RELIGION IN X3a, X3b, X4 OR X4m1:
+
+               Would you call yourself a born-again Christian, that is,
+               have you personally had a conversion experience related
+               to Jesus Christ?
+               --------------------------------------------------
+
+               1. YES
+               5. NO
+
+               8. DK
+               9. RF
+               0. NA; INAP, 0,9 in X1; 5,8,9 or NA in X1a; 3,8,9 or NA in X3a/b;
+                  5,8,9 or NA in X4m1
+
+           VALUE  LABEL
+               0  NA. INAP, 0,9 in X1. 5,8,9 or NA in X
+               1  YES
+               5  NO
+               8  DK
+               9  RF
+
+           Data type: numeric
+           Missing-data codes: 0,8-*
+           Record/column: 1/103
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 46
+
+
+      v904               X9x. Religion summary
+
+
+           X9x.
+
+               Do you mostly attend a place of worship that is
+               Protestant, Roman Catholic, Jewish, or something else /
+               Do you consider yourself Protestant, Roman Catholic,
+               Jewish, or something else?
+               JEWISH:
+               Do you usually attend a synagogue or temple that is
+               Orthodox, Conservative, Reform or what/
+               Do you consider yourself Orthodox, Conservative, Reform,
+               or what?
+               PROTESTANT OR SOMETHING ELSE:
+               What church or denomination is that?
+                 IF BAPTIST: With which Baptist group is your church
+                 associated? Is it the Southern Baptist Convention, the
+                 American Baptist Churches in the U.S.A., the American
+                 Baptist Association, an independent Baptist church or
+                 some other Baptist group? (INDEPENDENT BAPTIST:) Are
+                 you affiliated with any larger Baptist group or is
+                 this strictly a local church?
+                 IF LUTHERAN: Is this church part of the Evangelical
+                 Lutheran Church in American, the Missouri Synod, or
+                 some other Lutheran group?
+                 IF METHODIST: Is your church part of the United
+                 Methodist Church, African Methodist Episcopal, or some
+                 other Methodist group?
+                 IF PRESBYTERIAN: Is this the Presbyterian Church in
+                 the USA or some other Presbyterian group?
+                 IF REFORMED: Is this the Christian Reformed Church,
+                 the Reformed Church in America or some  Other Reformed
+                 group?
+                 IF BRETHREN: Is this the church of the Brethren, the
+                 Plymouth Brethren, or what?'
+                 IF 'CHRISTIAN': When you say "Christian" does that
+                 mean the denomination called the "Christian Church
+                 Disciples of  Christ" or some other Christian
+                 denomination, or do you mean to say "I am just a
+                 Christian"?
+                 IF CHURCH OF CHRIST: Is this the Church of Christ or
+                 the United Church of Christ?
+                 IF CHURCH OF GOD: Is this the Church of God of
+                 Anderson, Indiana; the Church of God of Cleveland,
+                 Tennessee; the Church of God in Christ; or some other
+                 Church of God?
+                 IF PENTECOSTAL OR HOLINESS: What kind of church is
+
+
+                                 February 21, 2016
+
+
+
+      2000 American National Election Study (Vers. 2)                  Page 47
+
+
+                 that? What is it called exactly? Is that part of a
+                 larger church or denomination?  What is that church
+                 called?
+                 IF OTHER: What is it called exactly? Is that church
+                 part of a  denomination?
+                 IF OTHER: Is that group Christian?
+
+               RELIGION SUMMARY
+               --------------------------------------------------
+
+               This variable summarizes the information gathered in
+               questions X3a/b, X4, X4a-m, X4m1, X6a/b.  Information
+               collected in the open-ended responses to the religion
+               section component questions have been hand coded into this
+               summary variable. NOTE: in 1 case, an R whose initial religious
+               group was identified as Protestant was discovered, upon further
+               probing, to be Roman Catholic.
+
+               Codes 010-990 and:
+
+               995. NA
+               998. DK
+               999. RF
+               000. INAP, no religious identification or preference (and R does
+                    not attend religious services)
+
+           VALUE  LABEL
+               0  INAP, no religious identification o
+             995  NA
+             998  DK
+             999  RF
+
+           Data type: numeric
+           Missing-data codes: 0,995-*
+           Record/columns: 1/105-107
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 February 21, 2016
